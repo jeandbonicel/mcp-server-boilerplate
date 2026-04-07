@@ -1,0 +1,74 @@
+{
+  "name": "mcp-server-boilerplate",
+  "version": "1.0.0",
+  "description": "Production-ready MCP server boilerplate with TypeScript, authentication, and multiple transports",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "bin": {
+    "mcp-server": "./dist/transports/stdio.js",
+    "create-mcp-server": "./dist/cli.js",
+    "mcp-server-boilerplate": "./dist/cli.js"
+  },
+  "main": "./dist/server.js",
+  "exports": {
+    ".": "./dist/server.js",
+    "./stdio": "./dist/transports/stdio.js",
+    "./http": "./dist/transports/http.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "dev:stdio": "tsx src/transports/stdio.ts",
+    "dev:http": "tsx src/transports/http.ts",
+    "build": "tsc",
+    "start:stdio": "node dist/transports/stdio.js",
+    "start:http": "node dist/transports/http.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write 'src/**/*.ts'",
+    "format:check": "prettier --check 'src/**/*.ts'",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "llm",
+    "claude",
+    "server",
+    "typescript",
+    "boilerplate"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "dotenv": "^16.4.0",
+    "express": "^5.1.0",
+    "jose": "^6.0.0",
+    "pino": "^9.6.0",
+    "smol-toml": "^1.6.1",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^10.0.0",
+    "pino-pretty": "^13.0.0",
+    "prettier": "^3.4.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.0",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^3.0.0"
+  }
+}

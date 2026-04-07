@@ -1,0 +1,33 @@
+# MCP Server Configuration
+# Copy this file and modify as needed.
+# Environment variables override values in this file.
+
+[server]
+name = "mcp-server"
+version = "1.0.0"
+
+[http]
+port = 3000
+host = "127.0.0.1"
+
+[logging]
+level = "info"  # fatal | error | warn | info | debug | trace
+
+# Authentication mode: "none" | "api-key" | "oauth"
+[auth]
+mode = "none"
+
+# API Key auth — list of valid keys
+# Uncomment and add your keys:
+# keys = ["my-secret-key-1", "my-secret-key-2"]
+
+# JWT / OAuth token verification
+# [auth.jwt]
+# issuer = "https://auth.example.com"
+# audience = "mcp-server"
+# secret = "your-shared-secret"
+# jwks_uri = "https://auth.example.com/.well-known/jwks.json"
+
+# OAuth 2.1 authorization server
+# [auth.oauth]
+# issuer_url = "https://auth.example.com"

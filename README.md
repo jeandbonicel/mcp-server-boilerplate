@@ -1,9 +1,15 @@
 # MCP Server Boilerplate
 
-Production-ready [Model Context Protocol](https://modelcontextprotocol.io/) server boilerplate with TypeScript, authentication, and multiple transports.
+<p align="center">
+  <img src="cover.png" alt="MCP Server Pro Kit" width="100%" />
+</p>
 
-[![CI](https://github.com/jeandbonicel/mcp-server-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/jeandbonicel/mcp-server-boilerplate/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/mcp-server-boilerplate)](https://www.npmjs.com/package/mcp-server-boilerplate)
+<p align="center">
+  <a href="https://github.com/jeandbonicel/mcp-server-boilerplate/actions/workflows/ci.yml"><img src="https://github.com/jeandbonicel/mcp-server-boilerplate/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <a href="https://www.npmjs.com/package/mcp-server-boilerplate"><img src="https://img.shields.io/npm/v/mcp-server-boilerplate" alt="npm" /></a>
+</p>
+
+Production-ready [Model Context Protocol](https://modelcontextprotocol.io/) server boilerplate with TypeScript, authentication, and multiple transports.
 
 
 ## Features
